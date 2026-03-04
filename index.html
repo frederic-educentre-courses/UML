@@ -1,41 +1,124 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>UML et POO</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section data-visibility="hidden">Slide X</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Qu'est-ce que l'UML ?</h2>
+				<p>L'UML est un langage de modélisation graphique utilisé pour représenter les systèmes logiciels.</p>
+			</section>
+			<section>
+				<section>
+					<h2>Différents types d'UML</h2>
+					<p>Il existe différents types d'UML, chacun ayant ses propres caractéristiques.</p>
+					<ul>
+						<li>Diagramme de classes</li>
+						<li>Diagramme de cas d'utilisation</li>
+						<li>Diagramme d'activité</li>
+						<li>Diagramme de séquence</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<p>Outil pour réaliser les diagrammes UML : Lucidchart</p>
+				<a href="https://lucidchart.com/">https://lucidchart.com/</a>
+			</section>
+			<section>
+				<img src="/lucidchart.png" alt="">
+			</section>
+			<section>
+				<h2>Diagramme de classe</h2>
+				<p>#Structure</p>
+				<p>Un diagramme de classe comporte des classes, des attributs, des méthodes et des relations entre
+					les classes.</p>
+			</section>
+			<section>
+				<p>Les classes sont représentées par des rectangles séparés en trois parties : le nom de la classe, les attributs et les méthodes.</p>
+				<img src="/ModeleDiagrammeDeClasseFR.svg.png" alt="">
+			</section>
+			<section>
+				<p>Exemple d'une classe dans lucid chart</p>
+				<img src="/exempleCLass.png" alt="">
+				<p>+ public</p>
+				<p>- private</p>
+			</section>
+			<section>
+				<h2>Héritage dans Lucid Chart</h2>
+				<img src="/exemple_heritage_lucid_chart.png" alt="">
+				<p>Human hérite de Etre vivant</p>
+			</section>
+			<section>
+				<img src="/classLucidchart.png" alt="">
+			</section>
+			<section>
+				<h2>Diagramme de cas d'utilisation</h2>
+				<p>#Utilité</p>
+				<p>Un cas d'utilisation est une action que l'utilisateur peut effectuer sur le système.</p>
+				<p>Un diagramme de cas d'utilisation comporte des cas d'utilisation, des acteurs et des relations
+					entre
+					les cas d'utilisation et les acteurs.</p>
+			</section>
+			<section>
+				<pre>
+					<code>
+Acteur : utilisateur qui interagit avec le système
+Cas d'utilisation : action que l'utilisateur peut effectuer sur le système
+Extend : facultatif, indique que le cas d'utilisation peut être étendu par un autre cas d'utilisation
+Include : obligatoire, indique que le cas d'utilisation doit inclure un autre cas d'utilisation
+					</code>
+				</pre>
+				<img src="/casUtilisationLucidChart.png" alt="">
+			</section>
+			<section>
+				<h2>Diagramme d'activité</h2>
+				<p>#Décisions</p>
+				<p>Un diagramme d'activité permet de montrer les décisions réalisables dans un processus.</p>
+			</section>
+			<section>
+				<img src="/casActivitéLucidChart.png" alt="">
+			</section>
+			<section>
+				<h2>Diagramme de séquence</h2>
+				<p>#Déroulement</p>
+				<p>Un diagramme de séquence montre le déroulement d'un processus.</p>
+				<p>Il comporte des objets, des messages et des lignes de vie.</p>
+			</section>
+			<section>
+				<img src="/SequenceLucidChart.png" alt="">
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
