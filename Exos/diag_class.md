@@ -77,11 +77,15 @@
 
 ## Relations
 
-- Client 1 ── * Panier
-- Panier * ── * Produit
-- Commande 1 ── 1 Client
-- Commande 1 ── * Produit
-- Commande 1 ── 1 Paiement
-- Commande 1 ── 1 Livraison
+- 1 Client **peut commander** 0 ou * panier
+- 1 Panier **peut être commandé** par 1 Client
+- 1 Panier **contient** 1 ou Produit
+- 1 Produit **peut être contenu** par 0 ou * Panier
+- 1 Client **dispose** de 0 ou * Commande
+- 1 Commande **est disposé** par 1 Client
+- 1 Commande **contient** 1 ou * Produit
+- 1 Produit **est contenu** par 0 ou * Commande
+- 1 Commande **correspond** à 1 Paiement
+- 1 Commande **correspond** à 1 Livraison
 - ProduitPhysique et ProduitNumerique héritent de Produit
 - ClientParticulier et ClientProfessionnel héritent de Client
